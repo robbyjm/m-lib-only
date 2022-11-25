@@ -1,0 +1,49 @@
+<mvc:View
+  controllerName="sap.ui.demo.basicTemplate.controller.Home"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+>
+  <Page id="page" title="{i18n>title}">
+    <customHeader>
+      <Bar>
+        <contentLeft>
+          <Breadcrumbs separatorStyle="GreaterThan"
+            ><Link text="Home" /><Link text="Order" />
+          </Breadcrumbs>
+        </contentLeft>
+        <contentRight
+          ><Button text="Edit" icon="sap-icon://edit" type="Emphasized"></Button
+        ></contentRight>
+      </Bar>
+    </customHeader>
+    <Title titleStyle="H2" text="Order Identifier"></Title>
+    <HeaderContainer>
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="OCD Processor"
+        text="Mr. Robby Manis"
+        state="Information"
+        icon="sap-icon://employee"
+        inverted="true"
+      />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="OCD Processor Group"
+        text="Group 1"
+        state="Information"
+        icon="sap-icon://group"
+        inverted="true"
+      />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="Status"
+        text="Shipped"
+        state="Information"
+        icon="sap-icon://hint"
+        inverted="false"
+      />
+    </HeaderContainer>
+    <FlexBox> </FlexBox>
+  </Page>
+</mvc:View>
