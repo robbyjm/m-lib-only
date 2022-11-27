@@ -1,5 +1,10 @@
-<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Home" displayBlock="true" xmlns="sap.m"
-          xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View
+  controllerName="sap.ui.demo.basicTemplate.controller.Home"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:mvc="sap.ui.core.mvc"
+>
   <Page id="page" title="{i18n>title}">
     <customHeader>
       <Bar>
@@ -9,40 +14,109 @@
             <Link text="Order" />
           </Breadcrumbs>
         </contentLeft>
-        <contentRight><Button text="Edit" icon="sap-icon://edit" type="Emphasized"></Button></contentRight>
+        <contentRight><Button
+            text="Edit"
+            icon="sap-icon://edit"
+            type="Emphasized"
+          /></contentRight>
       </Bar>
     </customHeader>
-    <Title class="sapUiResponsiveMargin" titleStyle="H2" text="Order Identifier"></Title>
+    <Title
+      class="sapUiResponsiveMargin"
+      titleStyle="H2"
+      text="Order Identifier"
+    />
     <HeaderContainer class="sapUiResponsiveMargin">
-      <ObjectStatus class="sapMObjectStatusLarge" title="OCD Processor" text="Mr. Robby Manis" state="Information"
-                    icon="sap-icon://employee" inverted="true" />
-      <ObjectStatus class="sapMObjectStatusLarge" title="OCD Processor Group" text="Group 1" state="Information"
-                    icon="sap-icon://group" inverted="true" />
-      <ObjectStatus class="sapMObjectStatusLarge" title="Status" text="Shipped" state="Information"
-                    icon="sap-icon://hint" inverted="false" />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="OCD Processor"
+        text="Mr. Robby Manis"
+        state="Information"
+        icon="sap-icon://employee"
+        inverted="true"
+      />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="OCD Processor Group"
+        text="Group 1"
+        state="Information"
+        icon="sap-icon://group"
+        inverted="true"
+      />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="Status"
+        text="Shipped"
+        state="Information"
+        icon="sap-icon://hint"
+        inverted="false"
+      />
     </HeaderContainer>
-    <f:Form title="Header">
+    <f:Form>
       <f:layout>
-        <f:ColumnLayout columnsXL="3" columnsL="3" columnsM="2" labelCellsLarge="1"></f:ColumnLayout>
+        <f:ColumnLayout
+          columnsXL="3"
+          columnsL="3"
+          columnsM="2"
+          labelCellsLarge="1"
+        />
       </f:layout>
-      <f:FormContainer>
-        <f:FormElement label="Name">
-          <Input></Input>
+      <f:FormContainer title="Container 1">
+	<f:FormElement label="OCD Preparation Date / Currency">
+	  <DatePicker valueFormat="yyyy-MM-dd" placeholder="yyyy-MM-dd" />
+	  <Select />
         </f:FormElement>
-        <f:FormElement label="Street">
-          <Input placeholder="1 Main St"></Input>
-          <Input placeholder="07726"></Input>
+        <f:FormElement label="TFS Representative">
+	  <Select />
+	  <Input placeholder="John Smith">
+	    <layoutData>
+	      <f:ColumnElementData cellsLarge="10" cellsSmall="10" />
+	      </layoutData>
+	    </Input>
+        </f:FormElement>
+	
+      </f:FormContainer>
+      <f:FormContainer title="Container 2">
+        <f:FormElement label="Payment Terms">
+	  <Select />
+        </f:FormElement>
+	<f:FormElement label="Customer PO Reference / Date">
+          <Input placeholder="Jane Smith">
+	    <layoutData>
+	      <f:ColumnElementData cellsLarge="8" cellsSmall="8" />
+	      </layoutData>
+	    </Input>
+	  <DatePicker valueFormat="yyyy-MM-dd" placeholder="yyyy-MM-dd" />
         </f:FormElement>
       </f:FormContainer>
-      <f:FormContainer>
-        <f:FormElement label="Name">
-          <Input></Input>
-        </f:FormElement>
-        <f:FormElement label="Street">
-          <Input placeholder="1 Main St"></Input>
-          <Input placeholder="07726"></Input>
-        </f:FormElement>
+<f:FormContainer title="Container 3">
+  <f:FormElement label="Is dealer involved?">
+    <Switch customTextOn="Yes" customTextOff="No" />
+    <Input placeholder="1 main street">
+     <layoutData>
+       <f:ColumnElementData cellsLarge="10" cellsSmall="10"/>
+     </layoutData>
+   </Input>
+  </f:FormElement>
+ <f:FormElement label="Dealer City / Zip / Country">
+   <Input placeholder="city"/>
+   <Input placeholder="10001">
+     <layoutData>
+       <f:ColumnElementData cellsLarge="3" cellsSmall="3"/>
+     </layoutData>
+   </Input>
+   <Select />
+ </f:FormElement>
       </f:FormContainer>
     </f:Form>
+    <IconTabBar>
+      <items>
+	<IconTabFilter text="SFDC Info" />
+	<IconTabFilter text="Items">
+	  <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Items" />
+	</IconTabFilter>
+	<IconTabFilter text="Warranty" />
+      </items>
+  </IconTabBar>
   </Page>
 </mvc:View>

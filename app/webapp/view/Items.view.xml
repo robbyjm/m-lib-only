@@ -1,0 +1,67 @@
+<mvc:View
+  controllerName="sap.ui.demo.basicTemplate.controller.Items"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:mvc="sap.ui.core.mvc"
+>
+    <Title
+      class="sapUiResponsiveMargin"
+      titleStyle="H2"
+      text="Order Identifier"
+    />
+    <HeaderContainer class="sapUiResponsiveMargin">
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="OCD Processor"
+        text="Mr. Robby Manis"
+        state="Information"
+        icon="sap-icon://employee"
+        inverted="true"
+      />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="OCD Processor Group"
+        text="Group 1"
+        state="Information"
+        icon="sap-icon://group"
+        inverted="true"
+      />
+      <ObjectStatus
+        class="sapMObjectStatusLarge"
+        title="Status"
+        text="Shipped"
+        state="Information"
+        icon="sap-icon://hint"
+        inverted="false"
+      />
+    </HeaderContainer>
+    <f:Form title="Header">
+      <f:layout>
+        <f:ColumnLayout
+          columnsXL="3"
+          columnsL="3"
+          columnsM="2"
+          labelCellsLarge="1"
+        />
+      </f:layout>
+      <f:FormContainer>
+        <f:FormElement label="Name">
+          <Input />
+        </f:FormElement>
+        <f:FormElement label="Street">
+          <Input placeholder="1 Main St" />
+          <Input placeholder="07726" />
+        </f:FormElement>
+      </f:FormContainer>
+      <f:FormContainer>
+        <f:FormElement label="Name">
+          <Input />
+        </f:FormElement>
+        <f:FormElement label="Street">
+          <Input placeholder="1 Main St" />
+          <Input placeholder="07726" />
+        </f:FormElement>
+      </f:FormContainer>
+    </f:Form>
+</mvc:View>
