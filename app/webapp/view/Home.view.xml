@@ -1,49 +1,48 @@
-<mvc:View
-  controllerName="sap.ui.demo.basicTemplate.controller.Home"
-  displayBlock="true"
-  xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc"
->
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Home" displayBlock="true" xmlns="sap.m"
+          xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
   <Page id="page" title="{i18n>title}">
     <customHeader>
       <Bar>
         <contentLeft>
-          <Breadcrumbs separatorStyle="GreaterThan"
-            ><Link text="Home" /><Link text="Order" />
+          <Breadcrumbs separatorStyle="GreaterThan">
+            <Link text="Home" />
+            <Link text="Order" />
           </Breadcrumbs>
         </contentLeft>
-        <contentRight
-          ><Button text="Edit" icon="sap-icon://edit" type="Emphasized"></Button
-        ></contentRight>
+        <contentRight><Button text="Edit" icon="sap-icon://edit" type="Emphasized"></Button></contentRight>
       </Bar>
     </customHeader>
-    <Title titleStyle="H2" text="Order Identifier"></Title>
-    <HeaderContainer>
-      <ObjectStatus
-        class="sapMObjectStatusLarge"
-        title="OCD Processor"
-        text="Mr. Robby Manis"
-        state="Information"
-        icon="sap-icon://employee"
-        inverted="true"
-      />
-      <ObjectStatus
-        class="sapMObjectStatusLarge"
-        title="OCD Processor Group"
-        text="Group 1"
-        state="Information"
-        icon="sap-icon://group"
-        inverted="true"
-      />
-      <ObjectStatus
-        class="sapMObjectStatusLarge"
-        title="Status"
-        text="Shipped"
-        state="Information"
-        icon="sap-icon://hint"
-        inverted="false"
-      />
+    <Title class="sapUiResponsiveMargin" titleStyle="H2" text="Order Identifier"></Title>
+    <HeaderContainer class="sapUiResponsiveMargin">
+      <ObjectStatus class="sapMObjectStatusLarge" title="OCD Processor" text="Mr. Robby Manis" state="Information"
+                    icon="sap-icon://employee" inverted="true" />
+      <ObjectStatus class="sapMObjectStatusLarge" title="OCD Processor Group" text="Group 1" state="Information"
+                    icon="sap-icon://group" inverted="true" />
+      <ObjectStatus class="sapMObjectStatusLarge" title="Status" text="Shipped" state="Information"
+                    icon="sap-icon://hint" inverted="false" />
     </HeaderContainer>
-    <FlexBox> </FlexBox>
+    <f:Form title="Header">
+      <f:layout>
+        <f:ColumnLayout columnsXL="3" columnsL="3" columnsM="2" labelCellsLarge="1"></f:ColumnLayout>
+      </f:layout>
+      <f:FormContainer>
+        <f:FormElement label="Name">
+          <Input></Input>
+        </f:FormElement>
+        <f:FormElement label="Street">
+          <Input placeholder="1 Main St"></Input>
+          <Input placeholder="07726"></Input>
+        </f:FormElement>
+      </f:FormContainer>
+      <f:FormContainer>
+        <f:FormElement label="Name">
+          <Input></Input>
+        </f:FormElement>
+        <f:FormElement label="Street">
+          <Input placeholder="1 Main St"></Input>
+          <Input placeholder="07726"></Input>
+        </f:FormElement>
+      </f:FormContainer>
+    </f:Form>
   </Page>
 </mvc:View>
