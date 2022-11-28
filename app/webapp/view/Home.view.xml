@@ -22,11 +22,11 @@
       </Bar>
     </customHeader>
     <Title
-      class="sapUiResponsiveMargin"
+      class="sapUiSmallMargin"
       titleStyle="H2"
       text="Order Identifier"
     />
-    <HeaderContainer class="sapUiResponsiveMargin">
+    <HeaderContainer class="sapUiTinyMarginBottom">
       <ObjectStatus
         class="sapMObjectStatusLarge"
         title="OCD Processor"
@@ -58,65 +58,66 @@
           columnsXL="3"
           columnsL="3"
           columnsM="2"
-          labelCellsLarge="1"
         />
       </f:layout>
       <f:FormContainer title="Container 1">
-	<f:FormElement label="OCD Preparation Date / Currency">
-	  <DatePicker valueFormat="yyyy-MM-dd" placeholder="yyyy-MM-dd" />
-	  <Select />
+        <f:FormElement label="OCD Preparation Date / Currency">
+          <DatePicker valueFormat="yyyy-MM-dd" placeholder="yyyy-MM-dd" />
+          <Select />
         </f:FormElement>
         <f:FormElement label="TFS Representative">
-	  <Select />
-	  <Input placeholder="John Smith">
-	    <layoutData>
-	      <f:ColumnElementData cellsLarge="10" cellsSmall="10" />
-	      </layoutData>
-	    </Input>
+          <Select />
+          <Input placeholder="John Smith">
+          <layoutData>
+            <f:ColumnElementData cellsLarge="9" cellsSmall="9" />
+          </layoutData>
+          </Input>
         </f:FormElement>
-	
+
       </f:FormContainer>
       <f:FormContainer title="Container 2">
         <f:FormElement label="Payment Terms">
-	  <Select />
+          <Select />
         </f:FormElement>
-	<f:FormElement label="Customer PO Reference / Date">
+        <f:FormElement label="Customer PO Reference / Date">
           <Input placeholder="Jane Smith">
-	    <layoutData>
-	      <f:ColumnElementData cellsLarge="8" cellsSmall="8" />
-	      </layoutData>
-	    </Input>
-	  <DatePicker valueFormat="yyyy-MM-dd" placeholder="yyyy-MM-dd" />
+          <layoutData>
+            <f:ColumnElementData cellsLarge="8" cellsSmall="8" />
+          </layoutData>
+          </Input>
+          <DatePicker valueFormat="yyyy-MM-dd" placeholder="yyyy-MM-dd" />
         </f:FormElement>
       </f:FormContainer>
-<f:FormContainer title="Container 3">
-  <f:FormElement label="Is dealer involved?">
-    <Switch customTextOn="Yes" customTextOff="No" />
-    <Input placeholder="1 main street">
-     <layoutData>
-       <f:ColumnElementData cellsLarge="10" cellsSmall="10"/>
-     </layoutData>
-   </Input>
-  </f:FormElement>
- <f:FormElement label="Dealer City / Zip / Country">
-   <Input placeholder="city"/>
-   <Input placeholder="10001">
-     <layoutData>
-       <f:ColumnElementData cellsLarge="3" cellsSmall="3"/>
-     </layoutData>
-   </Input>
-   <Select />
- </f:FormElement>
+      <f:FormContainer title="Container 3">
+        <f:FormElement label="Is dealer involved?">
+          <Switch customTextOn="Yes" customTextOff="No" />
+          <Input placeholder="Dealer Name">
+          <layoutData>
+            <f:ColumnElementData cellsLarge="10" cellsSmall="10" />
+          </layoutData>
+          </Input>
+        </f:FormElement>
+        <f:FormElement label="Dealer City / Zip / Country">
+          <Input placeholder="City" />
+          <Input placeholder="Zip">
+          <layoutData>
+            <f:ColumnElementData cellsLarge="3" cellsSmall="3" />
+          </layoutData>
+          </Input>
+          <Select />
+        </f:FormElement>
       </f:FormContainer>
     </f:Form>
     <IconTabBar>
       <items>
-	<IconTabFilter text="SFDC Info" />
-	<IconTabFilter text="Items">
-	  <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Items" />
-	</IconTabFilter>
-	<IconTabFilter text="Warranty" />
+        <IconTabFilter text="SFDC Info">
+          <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.display.sfdcInfo" />
+          </IconTabFilter>
+        <IconTabFilter text="Items">
+          <mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Items" />
+        </IconTabFilter>
+        <IconTabFilter text="Warranty" />
       </items>
-  </IconTabBar>
+    </IconTabBar>
   </Page>
 </mvc:View>

@@ -3,65 +3,80 @@
   displayBlock="true"
   xmlns="sap.m"
   xmlns:f="sap.ui.layout.form"
+  xmlns:l="sap.ui.layout"
   xmlns:mvc="sap.ui.core.mvc"
 >
-    <Title
-      class="sapUiResponsiveMargin"
-      titleStyle="H2"
-      text="Order Identifier"
+<Table>
+  <columns>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Select Type" />
+      <footer>
+      <ObjectNumber textAlign="Center" number="100" />
+      </footer>
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Model Description" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Product Code" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Quantity" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="List Price" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Discount Category" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Dealer Price / Unit" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Proposed Discount" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Proposed Price / Unit" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Order Value on List Price" />
+    </Column>
+    <Column hAlign="Center" vAlign="Middle">
+      <Text text="Order Value for Thermo Fisher" />
+    </Column>
+  </columns>
+</Table>
+<l:Grid position="Center" defaultSpan="XL6 L6 M6 S12">
+<f:Form backgroundDesign="Transparent">
+<f:layoutData>
+  <l:GridData spanXL="3" spanL="3" spanM="3" />
+</f:layoutData>
+<f:layout>
+<f:ColumnLayout emptyCellsLarge="11" columnsL="1" />
+</f:layout>
+  <f:FormContainer>
+    <f:FormElement label="Packing">
+      <Input placeholder="10" description="%" />
+    </f:FormElement>
+    <f:FormElement label="Inland Freight">
+      <Input placeholder="10" description="%" />
+    </f:FormElement>
+    <f:FormElement label="Forwarding">
+      <Input placeholder="10" description="%" />
+    </f:FormElement>
+    <f:FormElement label="Air / Sea Freight">
+      <Input placeholder="10" description="%" />
+    </f:FormElement>
+    <f:FormElement label="Insurance">
+      <Input placeholder="10" description="%" />
+    </f:FormElement>
+  </f:FormContainer>
+</f:Form>
+<ObjectNumber
+      number="$1,000"
+      unit="USD"
+      state="Success"
+      class="sapMObjectNumberLarge"
     />
-    <HeaderContainer class="sapUiResponsiveMargin">
-      <ObjectStatus
-        class="sapMObjectStatusLarge"
-        title="OCD Processor"
-        text="Mr. Robby Manis"
-        state="Information"
-        icon="sap-icon://employee"
-        inverted="true"
-      />
-      <ObjectStatus
-        class="sapMObjectStatusLarge"
-        title="OCD Processor Group"
-        text="Group 1"
-        state="Information"
-        icon="sap-icon://group"
-        inverted="true"
-      />
-      <ObjectStatus
-        class="sapMObjectStatusLarge"
-        title="Status"
-        text="Shipped"
-        state="Information"
-        icon="sap-icon://hint"
-        inverted="false"
-      />
-    </HeaderContainer>
-    <f:Form title="Header">
-      <f:layout>
-        <f:ColumnLayout
-          columnsXL="3"
-          columnsL="3"
-          columnsM="2"
-          labelCellsLarge="1"
-        />
-      </f:layout>
-      <f:FormContainer>
-        <f:FormElement label="Name">
-          <Input />
-        </f:FormElement>
-        <f:FormElement label="Street">
-          <Input placeholder="1 Main St" />
-          <Input placeholder="07726" />
-        </f:FormElement>
-      </f:FormContainer>
-      <f:FormContainer>
-        <f:FormElement label="Name">
-          <Input />
-        </f:FormElement>
-        <f:FormElement label="Street">
-          <Input placeholder="1 Main St" />
-          <Input placeholder="07726" />
-        </f:FormElement>
-      </f:FormContainer>
-    </f:Form>
+</l:Grid>
 </mvc:View>

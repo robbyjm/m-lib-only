@@ -1,0 +1,49 @@
+<mvc:View
+  controllerName='sap.ui.demo.basicTemplate.controller.sfdcInfo'
+  displayBlock='true'
+  xmlns='sap.m'
+  xmlns:f='sap.ui.layout.form'
+  xmlns:mvc='sap.ui.core.mvc'
+>
+<f:Form labelSpanM="6">
+  <f:layout>
+    <f:ColumnLayout
+        columnsXL="3"
+        columnsL="3"
+        columnsM="2"
+      />
+  </f:layout>
+	<f:FormContainer title="container 1">
+    <f:FormElement label="Customer Reference Contact">
+      <Input placeholder="Adam Smith" />
+    </f:FormElement>
+    <f:FormElement label="Customer Reference Phone / Email">
+    <Input placeholder="+1 111-111-1111" />
+    <Input placeholder="john.doe@email.com" />
+    </f:FormElement>
+	</f:FormContainer>
+  <f:FormContainer title="container 2">
+  <f:FormElement label="End User Contact">
+  <Input placeholder="Jane Smith" />
+  </f:FormElement>
+    <f:FormElement label="End User Phone / Email">
+    <Input placeholder="+1 111-111-1111" />
+    <Input placeholder="john.doe@email.com" />
+    </f:FormElement>
+    </f:FormContainer>
+    <f:FormContainer title="container 3">
+    <f:FormElement label="End User Address">
+      <Input placeholder="Street" />
+    </f:FormElement>
+    <f:FormElement label="End User City / Zip / Country">
+              <Input placeholder="City" />
+          <Input placeholder="Zip">
+          <layoutData>
+            <f:ColumnElementData cellsLarge="3" cellsSmall="3" />
+          </layoutData>
+          </Input>
+          <Select />
+    </f:FormElement>
+  </f:FormContainer>
+</f:Form>
+</mvc:View>
